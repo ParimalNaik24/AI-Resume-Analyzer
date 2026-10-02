@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard · AI Resume Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="dash-body">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">✦</div>
+      <div>
+        <div class="brand-name">AI Resume Analyzer</div>
+        <div class="brand-sub">Admin Panel</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-table="users">Users</button>
+      <button class="nav-item" data-table="resumes">Resumes</button>
+      <button class="nav-item" data-table="resume_analysis">Resume Analysis</button>
+      <button class="nav-item" data-table="job_descriptions">Job Descriptions</button>
+      <button class="nav-item" data-table="skills">Skills</button>
+      <button class="nav-item" data-table="job_skills">Job Skills</button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div id="current-user" class="current-user">—</div>
+      <button id="logout-btn" class="btn-ghost">Log out</button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="content-header">
+      <h1 id="table-title">Users</h1>
+      <button id="add-btn" class="btn-primary">+ Create record</button>
+    </header>
+
+    <div id="table-wrap" class="table-wrap">
+      <table id="data-table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <p id="empty-msg" class="empty-msg" hidden>No records yet. Click "Create record" to add one.</p>
+    </div>
+  </main>
+
+  <!-- Add / Edit modal -->
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Add row</h2>
+        <button id="modal-close" class="icon-btn">&times;</button>
+      </div>
+      <form id="modal-form"></form>
+    </div>
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

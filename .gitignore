@@ -1,0 +1,6 @@
+cat << 'EOF'
+node_modules/
+.env
+dist/
+*.exe
+EOF

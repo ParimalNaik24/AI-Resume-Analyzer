@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in · AI Resume Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div>
+          <div class="brand-name">AI Resume Analyzer</div>
+          <div class="brand-sub">Database Admin Panel</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Sign in</button>
+        <button class="tab" data-tab="register">Create account</button>
+      </div>
+
+      <form id="login-form" class="form active">
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="btn-primary">Sign in</button>
+      </form>
+
+      <form id="register-form" class="form">
+        <label>Full name
+          <input type="text" name="full_name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required minlength="6" autocomplete="new-password" />
+        </label>
+        <button type="submit" class="btn-primary">Create account</button>
+      </form>
+
+      <p id="auth-error" class="error-msg" hidden></p>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
